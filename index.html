@@ -1,122 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Rakhi Art - Arcium Style</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #fff 40%, #f3e5f5 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 20px;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <title>Rakhi Art - Arcium Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Outfit:wght@100..900&family=Playwrite+AU+SA:wght@100..400&family=Poetsen+One&family=Righteous&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff 40%, #f3e5f5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            font-family: 'Baloo 2', sans-serif;
+            flex-direction: column;
 
-    .rakhi-container {
-      text-align: center;
-    }
+        }
 
-    .rakhi {
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, #c5cae9, #7e57c2);
-      border-radius: 50%;
-      border: 5px dotted #6a1b9a;
-      position: relative;
-      margin: auto;
-    }
+        h1.raksha-heading {
+            font-size: 2.8rem;
+            color: #6a1b9a;
+            text-shadow: 2px 2px 5px #e1bee7;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease;
+        }
 
-    .rakhi::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 100px;
-      height: 4px;
-      background: repeating-linear-gradient(
-        45deg,
-        #ba68c8,
-        #ba68c8 10px,
-        #e1bee7 10px,
-        #e1bee7 20px
-      );
-      left: -100px;
-      transform: translateY(-50%);
-    }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
 
-    .rakhi::after {
-      content: '';
-      position: absolute;
-      top: -15px;
-      left: -15px;
-      width: 210px;
-      height: 210px;
-      border-radius: 50%;
-      border: 4px dotted #9575cd;
-      box-sizing: border-box;
-    }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .rakhi-center {
-      width: 60px;
-      height: 60px;
-      background: #d1c4e9;
-      border-radius: 50%;
-      line-height: 60px;
-      font-size: 30px;
-      color: #6a1b9a;
-      margin: 70px auto 0;
-      font-weight: bold;
-    }
+        .rakhi-container {
+            text-align: center;
+        }
 
-    .rakhi-thread-right {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 100px;
-      height: 4px;
-      background: repeating-linear-gradient(
-        45deg,
-        #ba68c8,
-        #ba68c8 10px,
-        #e1bee7 10px,
-        #e1bee7 20px
-      );
-      right: -100px;
-      transform: translateY(-50%);
-    }
+        .rakhi {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #c5cae9, #7e57c2);
+            border-radius: 50%;
+            border: 5px dotted #6a1b9a;
+            position: relative;
+            margin: auto;
+        }
 
-    .text {
-      margin-top: 20px;
-      font-size: 20px;
-      color: #4a148c;
-    }
+        .rakhi::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 200px;
+            height: 5px;
+            background: repeating-linear-gradient(45deg,
+                    #ba68c8,
+                    #ba68c8 10px,
+                    #e1bee7 10px,
+                    #e1bee7 20px);
+            left: -200px;
+            transform: translateY(-50%);
+        }
 
-    .umbrella {
-      font-size: 140px;
-      margin-top: 30px;
-      animation: float 2s infinite ease-in-out;
-    }
+        .rakhi::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 200px;
+            height: 5px;
+            background: repeating-linear-gradient(45deg,
+                    #ba68c8,
+                    #ba68c8 10px,
+                    #e1bee7 10px,
+                    #e1bee7 20px);
+            right: -200px;
+            transform: translateY(-50%);
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-  </style>
+        }
+
+        .rakhi-outer {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px dotted #9575cd;
+            box-sizing: border-box;
+
+        }
+
+        .rakhi-center {
+
+            width: 75px;
+            height: 60px;
+            background: #d1c4e9;
+            border-radius: 50%;
+            line-height: 85px;
+            margin: 50px auto 0;
+
+        }
+
+
+
+
+        .text {
+            /* margin-top: 15px; */
+            font-size: 18px;
+            color: #4a148c;
+            font-family: 'Baloo 2', sans-serif;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px dashed #ba68c8;
+            box-shadow: 0 4px 20px rgba(186, 104, 200, 0.3);
+            backdrop-filter: blur(8px);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 2s ease;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(186, 104, 200, 0.2);
+        }
+
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .umbrella {
+            font-size: 100px;
+            margin-top: 15px;
+            animation: float 2.5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="rakhi-container">
-    <div class="rakhi">
-      <div class="rakhi-thread-right"></div>
-      <div class="rakhi-center">🎁</div>
+    <h1 class="raksha-heading">💜 Happy Rakshabandhan 💜</h1>
+    <div class="rakhi-container">
+        <div class="rakhi">
+            <div class="rakhi-outer"></div>
+            <div class="rakhi-center"><img src="logo.png" alt="Arcium" height="40px"></div>
+        </div>
+        <div class="umbrella">☂️</div>
+        <div class="text">
+            This Rakshabandhan,<br>
+            The gift is <strong>Privacy</strong><br>
+            I give you <strong>digital peace</strong> wrapped in the <strong>Purple Umbrella</strong> ☂️<br><br>
+
+            क्योंकि तू सिर्फ़ मेरी बहन नहीं,
+            तू मेरी <strong>ज़िम्मेदारी</strong> है 💜 <br>
+            &lt;Stay Safe Stay Encrypted&gt;
+        </div>
     </div>
-    <div class="umbrella">☂️</div>
-    <div class="text">
-      This Rakshabandhan,<br>
-      The gift is <strong>Privacy</strong><br>
-      Under the <strong>Purple Umbrella</strong> ☂️
-    </div>
-  </div>
 </body>
+
 </html>
