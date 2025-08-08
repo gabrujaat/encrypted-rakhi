@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rakhi Art - Arcium Style</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff 40%, #f3e5f5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .rakhi-container {
+      text-align: center;
+    }
+
+    .rakhi {
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, #c5cae9, #7e57c2);
+      border-radius: 50%;
+      border: 5px dotted #6a1b9a;
+      position: relative;
+      margin: auto;
+    }
+
+    .rakhi::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 4px;
+      background: repeating-linear-gradient(
+        45deg,
+        #ba68c8,
+        #ba68c8 10px,
+        #e1bee7 10px,
+        #e1bee7 20px
+      );
+      left: -100px;
+      transform: translateY(-50%);
+    }
+
+    .rakhi::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      border: 4px dotted #9575cd;
+      box-sizing: border-box;
+    }
+
+    .rakhi-center {
+      width: 60px;
+      height: 60px;
+      background: #d1c4e9;
+      border-radius: 50%;
+      line-height: 60px;
+      font-size: 30px;
+      color: #6a1b9a;
+      margin: 70px auto 0;
+      font-weight: bold;
+    }
+
+    .rakhi-thread-right {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 4px;
+      background: repeating-linear-gradient(
+        45deg,
+        #ba68c8,
+        #ba68c8 10px,
+        #e1bee7 10px,
+        #e1bee7 20px
+      );
+      right: -100px;
+      transform: translateY(-50%);
+    }
+
+    .text {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #4a148c;
+    }
+
+    .umbrella {
+      font-size: 140px;
+      margin-top: 30px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="rakhi-container">
+    <div class="rakhi">
+      <div class="rakhi-thread-right"></div>
+      <div class="rakhi-center">🎁</div>
+    </div>
+    <div class="umbrella">☂️</div>
+    <div class="text">
+      This Rakshabandhan,<br>
+      The gift is <strong>Privacy</strong><br>
+      Under the <strong>Purple Umbrella</strong> ☂️
+    </div>
+  </div>
+</body>
+</html>
